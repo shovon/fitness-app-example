@@ -7,6 +7,7 @@ import { useColorScheme } from "@/hooks/useColorScheme";
 
 export default function TabLayout() {
 	const colorScheme = useColorScheme();
+	const [currentTab, setCurrentTab] = React.useState("index");
 
 	return (
 		<Tabs
@@ -30,10 +31,10 @@ export default function TabLayout() {
 			<Tabs.Screen
 				name="explore"
 				options={{
-					title: "Explore",
+					title: "Shorts",
 					tabBarIcon: ({ color, focused }) => (
 						<TabBarIcon
-							name={focused ? "code-slash" : "code-slash-outline"}
+							name={focused ? "videocam" : "videocam-outline"}
 							color={color}
 						/>
 					),
